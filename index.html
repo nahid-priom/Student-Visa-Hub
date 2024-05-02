@@ -13,6 +13,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .dropdown {
+        display: inline-block;
+        position: relative;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        margin-top: 13px;
+        display: flex;
+
+        flex-direction: column;
+        border-radius: 10px;
+      }
+
+      .dropdown-content a {
+        color: black;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        padding: 12px 16px;
+      }
+
+      .dropdown-content img {
+        width: 40px;
+        margin-right: 10px;
+      }
+
+      .dropdown-content p {
+        margin: 0;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #92220f;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header
@@ -66,13 +111,58 @@
                 >Home</a
               >
             </li>
-            <li class="max-lg:border-b max-lg:py-3 px-3">
+            <div class="dropdown max-lg:border-b max-lg:py-3">
               <a
-                href="javascript:void(0)"
-                class="text-[#333] hover:text-[#007bff] text-[17px] block font-semibold"
-                >Study Abroad</a
+                class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
+                href="#"
               >
-            </li>
+                Study Abroad <i class="fas fa-chevron-down ml-2"></i>
+              </a>
+              <div class="dropdown-content">
+                <a href="iphone.html">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png"
+                    alt="iPhone"
+                  />
+                  <p class="font-bold ml-4">Study in UK</p>
+                </a>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Flag_of_the_United_States.png/800px-Flag_of_the_United_States.png"
+                    alt="Samsung"
+                  />
+                  <p class="font-bold ml-4">Study in USA</p>
+                </a>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Flag_of_Canada.png"
+                    alt="Laptop"
+                  />
+                  <p class="font-bold ml-4">Study in Canada</p>
+                </a>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/1200px-Flag_of_Australia.svg.png"
+                    alt="iPad"
+                  />
+                  <p class="font-bold ml-4">Study in Australia</p>
+                </a>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Finland.png"
+                    alt="iPad"
+                  />
+                  <p class="font-bold ml-4">Study in Finalnd</p>
+                </a>
+                <a href="#">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/1280px-Flag_of_Germany.svg.png"
+                    alt="iPad"
+                  />
+                  <p class="font-bold ml-4">Study in Germany</p>
+                </a>
+              </div>
+            </div>
             <li class="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
