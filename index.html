@@ -26,10 +26,11 @@
         min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
+        transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out 2s;
       }
 
       .dropdown:hover .dropdown-content {
-        margin-top: 13px;
+        margin-top: 5px;
         display: flex;
 
         flex-direction: column;
@@ -61,7 +62,7 @@
   </head>
   <body>
     <header
-      class="max-w-7xl mx-auto flex bg-white border-b py-4 sm:px-10 px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50"
+      class="max-w-7xl mx-auto flex bg-white border-b py-4  px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50"
     >
       <div class="flex flex-wrap items-center lg:gap-y-2 w-full">
         <div class="flex justify-center items-center">
@@ -107,19 +108,19 @@
             <li class="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                class="text-[#92220f] hover:text-[#007bff] text-[17px] block font-semibold"
-                >Home</a
+                class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
+                >About</a
               >
             </li>
             <div class="dropdown max-lg:border-b max-lg:py-3">
               <a
                 class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
-                href="#"
+                href="study-abroad.html"
               >
                 Study Abroad <i class="fas fa-chevron-down ml-2"></i>
               </a>
               <div class="dropdown-content">
-                <a href="iphone.html">
+                <a href="study-usa.html">
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/4/42/Flag_of_the_United_Kingdom.png"
                     alt="iPhone"
@@ -166,21 +167,21 @@
             <li class="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                class="text-[#333] hover:text-[#007bff] text-[17px] block font-semibold"
+                class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
                 >Services</a
               >
             </li>
             <li class="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                class="text-[#333] hover:text-[#007bff] text-[17px] block font-semibold"
+                class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
                 >Requirements</a
               >
             </li>
             <li class="max-lg:border-b max-lg:py-3 px-3">
               <a
                 href="javascript:void(0)"
-                class="text-[#333] hover:text-[#007bff] text-[17px] block font-semibold"
+                class="text-[17px] px-4 py-3 hover:text-white text-[#3A3A3C] hover:bg-[#92220f] font-bold hover:text-gray-500 dropbtn"
                 >Contact</a
               >
             </li>
@@ -188,26 +189,6 @@
         </div>
 
         <div class="flex gap-x-6 gap-y-4 ml-auto">
-          <div
-            class="flex border-2 focus-within:border-gray-400 rounded-full px-6 py-3 overflow-hidden max-w-52 max-lg:hidden"
-          >
-            <input
-              type="text"
-              placeholder="Search something..."
-              class="w-full text-sm bg-transparent outline-none pr-2"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 192.904 192.904"
-              width="16px"
-              class="cursor-pointer fill-gray-600"
-            >
-              <path
-                d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z"
-              ></path>
-            </svg>
-          </div>
-
           <div class="flex items-center space-x-8">
             <a href="sign-in.html">
               <button
@@ -483,10 +464,13 @@
               <a
                 href="#"
                 class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2"
-                >How Student Accommodation Can Shape Your Future: A Personal Reflection</a
+                >How Student Accommodation Can Shape Your Future: A Personal
+                Reflection</a
               >
               <p class="text-gray-500 text-sm">
-                Entering the realm of higher education not only marks a significant transition in one’s academic journey but also in personal growth and future prospects. 
+                Entering the realm of higher education not only marks a
+                significant transition in one’s academic journey but also in
+                personal growth and future prospects.
               </p>
             </div>
             <div
@@ -564,7 +548,11 @@
                 >Study in Australia from Bangladesh after HSC</a
               >
               <p class="text-gray-500 text-sm">
-                Study in Australia from Bangladesh after HSC has become increasingly popular over the years. The Australian education system is renowned for its high quality and diversity, making it a great destination for students who are looking to pursue higher education
+                Study in Australia from Bangladesh after HSC has become
+                increasingly popular over the years. The Australian education
+                system is renowned for its high quality and diversity, making it
+                a great destination for students who are looking to pursue
+                higher education
               </p>
             </div>
             <div
