@@ -13,3 +13,8 @@ function handleClick() {
 
 toggleOpen.addEventListener('click', handleClick);
 toggleClose.addEventListener('click', handleClick);
+document.addEventListener("DOMContentLoaded", function() {
+ 
+  document.querySelector('.content').classList.remove('hidden');
+  document.querySelector('.preloader').classList.add('hidden');
+});
