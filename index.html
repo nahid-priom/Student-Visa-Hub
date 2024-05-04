@@ -13,17 +13,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      .card {
-        opacity: 0;
-        transform: translateX(100%);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-      .card.animated {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      @media (min-width: 1024px) {
+    .card {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .card.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
     </style>
+    
     <style>
       .dropdown {
         display: inline-block;
@@ -301,14 +306,14 @@
       document.addEventListener("DOMContentLoaded", function () {
         const animatedDiv = document.getElementById("animatedDiv");
         setTimeout(function () {
-          animatedDiv.style.transition = "transform 2s ease-in-out";
+          animatedDiv.style.transition = "transform 1.5s ease-in-out";
           animatedDiv.style.transform = "translateX(0)";
         }, 100);
       });
     </script>
 
-    <section id="servicesSection mt-8">
-      <div class="px-4 mx-auto max-w-7xl">
+    <section id="servicesSection">
+      <div class="px-4 pt-4 mx-auto max-w-7xl">
         <div
           class="grid max-w-4xl lg:max-w-7xl grid-cols-1 mx-auto text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 lg:grid-cols-4 sm:my-12"
         >
@@ -423,7 +428,8 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const cards = document.querySelectorAll(".card");
-  
+        const serviceSection = document.getElementById("servicesSection");
+    
         function isInViewport(element) {
           const rect = element.getBoundingClientRect();
           return (
@@ -433,25 +439,28 @@
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
           );
         }
-  
+    
         function animateCards() {
           cards.forEach((card, index) => {
             if (isInViewport(card) && !card.classList.contains("animated")) {
               setTimeout(() => {
                 card.classList.add("animated");
-              }, index * 300); 
+              }, index * 300);
             }
           });
         }
-  
+    
         function handleScroll() {
-          animateCards();
+          if (isInViewport(serviceSection)) {
+            animateCards();
+          }
         }
-  
+    
         window.addEventListener("scroll", handleScroll);
         animateCards(); // Trigger animation for cards initially in view
       });
-    </script>
+    </script> 
+    
     <!--Why choose us section-->
     <div
       class="relative flex flex-col-reverse py-0 lg:py-16 lg:pt-0 lg:flex-col mb-20"
