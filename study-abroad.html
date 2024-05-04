@@ -61,6 +61,15 @@
     </style>
   </head>
   <body>
+    <!-- Preloader -->
+  <div class="preloader fixed top-0 left-0 w-full h-full bg-orange-100 bg-opacity-50 flex justify-center items-center z-50">
+    <div class="loader border-4 border-t-4 border-[#92220f] rounded-full w-20 h-20 lg:w-40 lg:h-40 animate-spin">
+      <img src="images/logo.png" alt="Loading Icon" class="loading-icon lg:w-30 w-15 h-15 lg:h-30 mx-auto">
+    </div>
+  </div>
+
+  
+  <div class="content hidden">
     <!--Navbar-->
     <header
       class="max-w-7xl mx-auto flex bg-white border-b py-4  px-6 font-[sans-serif] min-h-[80px] tracking-wide relative z-50"
@@ -498,5 +507,6 @@
 
     <script src="js/navbarToggle.js"></script>
     <script src="https://unpkg.com/framer-motion@4.1.17/framer-motion.js"></script>
+    </div>
   </body>
 </html>
